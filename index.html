@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="https://img.icons8.com/?size=64&id=ujV8Tg9LwDRj&format=png" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box">
+            <div class="cover"></div>
+            <div class="shadow"></div>
+            <div class="content">
+                <div class="form">
+                    <h3 class="logo"><i class="fa-solid fa-key"></i></h3>
+                    <h1>Sign in</h1>
+                    <h3>Type anything</h3>
+                    <h3>There is a surprise</h3>
+                    <form id="loginForm">
+                        <div class="inputBox">
+                            <input type="text" id="username" required>
+                            <i class="fa-solid fa-user"></i>
+                            <span>Username</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="password" id="password" required>
+                            <i class="fa-solid fa-lock"></i>
+                            <span>Password</span>
+                        </div>
+                        <div class="links">
+                            <a href="#"> <i class="fa-solid fa-question"></i>Forgot password</a>
+                            <a href="#"><i class="fa-solid fa-user"></i>sign up</a>
+                        </div>
+                        <div class="inputBox">
+                            <!-- Change the input type to "button" to prevent automatic form submission -->
+                            <input type="button" value="Login" id="loginButton">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add a script to handle the button click event -->
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function() {
+            // Get the entered values
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Check if both username and password are filled out
+            if (username && password) {
+                // Redirect to a new page
+                window.location.href = 'new_page.html';
+            }
+        });
+    </script>
+</body>
+</html>
